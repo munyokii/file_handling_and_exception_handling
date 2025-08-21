@@ -21,4 +21,13 @@ with open(
 print('File written successfully with uppercase content')
 print("File written successfully with uppercase content:\n", new_content)
 
-
+try:
+    file_name = input("Enter the file name to read: ").strip().lower()
+    with open(file_name, 'r', encoding='utf-8') as read_file:
+        content = read_file.read()
+        print('File read successfully')
+        print(f"{file_name} file content:\n", content)
+except FileNotFoundError:
+    print("File not found. Please check the file name and try again.")
+except IOError:
+    print("Unable to read the file. Please try again!")
