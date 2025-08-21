@@ -9,4 +9,16 @@ with open(
 print('File read successfully')
 print("Input file content:\n", content)
 
+in_upper = content.upper()
+
+with open(
+  'C:\\Users\\jobmu\\Desktop\\cRaZy\\Python_Assignments\\file_handling_and_exception_handling\\output.txt', 'w',
+  encoding='utf-8'
+) as write_file:
+    new_content = in_upper
+    write_file.write(new_content)
+
+print('File written successfully with uppercase content')
+print("File written successfully with uppercase content:\n", new_content)
+
 
